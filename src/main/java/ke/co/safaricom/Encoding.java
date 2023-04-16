@@ -1,21 +1,20 @@
 package ke.co.safaricom;
-
 public class Encoding {
-    private static String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static String encode(String msg, int key){
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for(char c: msg.toCharArray()){
             int charPos = alphabets.indexOf(c);
             if (charPos == -1){
-                output = output + c;
+                output.append(c);
                 continue;
             }
             int tempNewPos = charPos + key;
             int newPos = tempNewPos > 25 ?  tempNewPos % 26 : tempNewPos;
             char replacement = alphabets.charAt(newPos);
-            output = output + replacement;
+            output.append(replacement);
         }
-        return output;
+        return output.toString();
     }
 }
