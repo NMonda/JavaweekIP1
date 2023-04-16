@@ -1,8 +1,5 @@
 package ke.co.safaricom;
 
-import java.io.Console;
-import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class App {
