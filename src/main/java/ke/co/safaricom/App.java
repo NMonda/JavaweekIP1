@@ -34,7 +34,7 @@ public class App {
             String nextStep = sc.nextLine();
 
             if (nextStep.startsWith("q"))
-            break; // Exit the loop and terminate the program
+                break; // Exit the loop and terminate the program
 
             }
         }
