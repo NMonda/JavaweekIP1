@@ -1,20 +1,18 @@
 package ke.co.safaricom;
 public class Encoding {
-    private static final String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String alphabets = "abcdefghijklmnopqrstuvwxyz";
 
-    public static String encode(String msg, int key){
-        StringBuilder output = new StringBuilder();
-        for(char c: msg.toCharArray()){
-            int charPos = alphabets.indexOf(c);
-            if (charPos == -1){
-                output.append(c);
-                continue;
+    public static String encrypt (String msg, int shift) {
+        StringBuilder encryptedMessage = new StringBuilder();
+        msg = msg.toUpperCase();
+        for (int i = 0; i< msg.length(); i++)
+        { char c = msg.charAt(i);
+            if( Character.isLetter(c))
+            {
+                c =(char) ((c - 'a'+ shift + 26)% 26 + 'a');
             }
-            int tempNewPos = charPos + key;
-            int newPos = tempNewPos > 25 ?  tempNewPos % 26 : tempNewPos;
-            char replacement = alphabets.charAt(newPos);
-            output.append(replacement);
-        }
-        return output.toString();
+            encryptedMessage.append(c);
+    }
+        return encryptedMessage.toString();
     }
 }

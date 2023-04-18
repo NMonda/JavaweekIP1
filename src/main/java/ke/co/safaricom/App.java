@@ -2,67 +2,43 @@ package ke.co.safaricom;
 
 import java.util.Scanner;
 
+import static ke.co.safaricom.Decoding.decrypt;
+import static ke.co.safaricom.Encoding.encrypt;
+
 public class App {
-    private String process;
-    private String message;
-    private int key;
-
-    public void setProcess(String process) {
-        this.process = process;
-    }
-
-    public String getProcess() {
-        return process;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
-
-    public int getKey() {
-        return key;
-    }
 
     public static void main(String[] args) {
-        Scanner userInputObject = new Scanner(System.in);
-        App mainObject = new App();
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+        System.out.println("Choose either to encode(e) or (d) to decode:");
+        String process =sc.nextLine();
 
-        do {
-            System.out.println("Select the Process: (e-encode/d-decode:");
-            mainObject.setProcess(userInputObject.nextLine());
+        System.out.println("Enter Your Message:");
+        String message = sc.nextLine();
 
-            System.out.println("Enter Your Message:");
-            mainObject.setMessage(userInputObject.nextLine());
+        System.out.println("Enter shift Value: (From 0 - 25);");
+        int shift= Integer.parseInt(sc.nextLine());
+       String encryptedMessage = encrypt(message, shift);
+       String decryptedMessage = decrypt(encryptedMessage, shift);
+        if (process.startsWith("e")){
+            System.out.println("Encrypted message: " + encryptedMessage);
+        }
+        else if (process.startsWith("d")) {
+            System.out.println("Decrypted message: " + decryptedMessage);
+        }
+        else {
+                System.out.println("Invalid input");
+                continue; // Prompt the user to start afresh
+        }
+            System.out.println("Do you wish to quit or continue?");
+            String nextStep = sc.nextLine();
 
-            System.out.println("Enter Any key: From 0 - 25;");
-            mainObject.setKey(userInputObject.nextInt());
+            if (nextStep.startsWith("q"))
+            break; // Exit the loop and terminate the program
 
-            System.out.println("Your Program is Processing...");
-            System.out.println(mainObject.getProcess());
-            if (mainObject.getProcess().startsWith("e")){
-                String output = Encoding.encode(mainObject.getMessage(), mainObject.getKey());
-                System.out.println(output);
-            } else if (mainObject.getProcess().startsWith("d")) {
-                String output = Decoding.decode(mainObject.getMessage(), mainObject.getKey());
-                System.out.println(output);
-            } else {
-                System.out.println("Your process is Invalid");
-                continue;
             }
-            System.out.println("Do you want to quit or continue the program");
-            userInputObject.nextLine();
-            String nextStep = userInputObject.nextLine();
-            if (nextStep.startsWith("q")){
-                break;
-            }
-        } while(true);
+        }
     }
-}
+
+
+
