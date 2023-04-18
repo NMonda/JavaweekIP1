@@ -39,11 +39,10 @@ public class App {
             System.out.println("Select the Process: (e-encode/d-decode:");
             mainObject.setProcess(userInputObject.nextLine());
 
-            System.out.println("Enter Your Message:for Encoding; THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\n" +
-                    "Decoding; QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD");
+            System.out.println("Enter Your Message:");
             mainObject.setMessage(userInputObject.nextLine());
 
-            System.out.println("Enter Any key: From 0 - 25; 23 for encoding and 3 for decoding");
+            System.out.println("Enter Any key: From 0 - 25;");
             mainObject.setKey(userInputObject.nextInt());
 
             System.out.println("Your Program is Processing...");
