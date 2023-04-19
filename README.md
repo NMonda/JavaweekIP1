@@ -26,22 +26,13 @@ has been moved down.
 * Enter the message
 - Input the message you want to display
 
-* Enter the key
-- Input the key number
-
-* After getting the output displayed, choosed whether to continue or to end
+* Enter the shift value
+- Input the number between 0-25
+- 
+* After getting the output displayed, choose whether to continue or to end
 - Input continue or quit
 
-**Example**
-* When encrypting, a person looks up each letter of the message in the "plain"
-  line and writes down the corresponding letter in the "cipher" line.
-- Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
-- Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
 
-**Expected output is either**
-
-- Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
-- Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
 
 
 ## Setup/Installation Requirements
@@ -67,7 +58,7 @@ Languages used Java. I have used IntelliJ for creating the project
 
 ## Support and contact details
 
-If you need any assistance on any issues or have questions, ideas or concerns. Kindly contact me through email: dopiyo@gmail.com to make a contribution to the code or for any assistance on the app/project.
+If you need any assistance on any issues or have questions, ideas or concerns. Kindly contact me through email: pookieproton@mail.com to make a contribution to the code or for any assistance on the app/project.
 
 ## Github URL Link
 
