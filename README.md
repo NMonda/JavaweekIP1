@@ -1,4 +1,4 @@
-# Ceaser Cipher Using Java Program
+# Ceaser Cipher with Java
 
 #### This project is about Ceaser Cipher Using Java Program, Version Date: 14th April 2023
 
