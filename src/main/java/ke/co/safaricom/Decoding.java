@@ -3,6 +3,9 @@ package ke.co.safaricom;
 public class Decoding {
     private static final String alphabets = "abcdefghijklmnopqrstuvwxyz";
 
+    public Decoding() {
+    }
+
     public static String decrypt(String msg, int shift) {
         StringBuilder decryptedMessage = new StringBuilder();
         for (int i = 0; i < msg.length(); i++) {

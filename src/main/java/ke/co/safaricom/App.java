@@ -7,6 +7,9 @@ import static ke.co.safaricom.Encoding.encrypt;
 
 public class App {
 
+    public App() {
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true) {
