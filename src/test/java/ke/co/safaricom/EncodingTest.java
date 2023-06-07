@@ -9,4 +9,8 @@ class EncodingTest {
     @Test
     void encode() {
     }
+
+    @org.junit.jupiter.api.Test
+    void encrypt() {
+    }
 }

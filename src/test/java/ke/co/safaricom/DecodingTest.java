@@ -9,4 +9,8 @@ class DecodingTest {
     @Test
     void decode() {
     }
+
+    @org.junit.jupiter.api.Test
+    void decrypt() {
+    }
 }
